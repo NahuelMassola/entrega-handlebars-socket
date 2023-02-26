@@ -1,15 +1,35 @@
 import express from "express";
 import productRouter from "./routes/products.routes.js";
 import cartRouter from "./routes/carts.routes.js";
+import viewsRouter from "./routes/viewsRouter.router.js";
+import handlebars from "express-handlebars"
+import * as path from "path"
+import { fileURLToPath } from "url";
+
 
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirmame = path.dirname(__filename);
+
+//static
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+app.use("/" , express.static(__dirmame + "/public"))
+
+//handlebars
+
+app.engine("handlebars" , handlebars.engine())
+app.set("view engine" , "handlebars");
+app.set("views" , path.resolve(__dirmame + "/views"))
+
 
 // Rutas
 
 app.use("/api/products" , productRouter);
 app.use("/api/cart" , cartRouter);
+app.use("/" , viewsRouter);
+
 
 // creo el Puerto
 

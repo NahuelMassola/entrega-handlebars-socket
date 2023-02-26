@@ -5,9 +5,9 @@
     "prince": 4500,
     "thumbnail": "image1",
     "code": "code111",
-    "stock": 5,
-    "id": "2",
-    "status": true
+    "stock": 25,
+    "status": true,
+    "id": "C"
   },
   {
     "title": "T-Shirt",
@@ -15,8 +15,18 @@
     "prince": 4500,
     "thumbnail": "image1",
     "code": "code111",
-    "stock": 5,
-    "id": "3",
-    "status": true
+    "stock": 25,
+    "status": true,
+    "id": "0"
+  },
+  {
+    "title": "T-Shirt",
+    "description": "Vans",
+    "prince": 4500,
+    "thumbnail": "image1",
+    "code": "code111",
+    "stock": 25,
+    "status": true,
+    "id": "M"
   }
 ]
