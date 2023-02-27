@@ -2,7 +2,7 @@
   {
     "title": "T-Shirt",
     "description": "Vans",
-    "prince": 4500,
+    "price": 4500,
     "thumbnail": "image1",
     "code": "code111",
     "stock": 25,
@@ -12,7 +12,7 @@
   {
     "title": "T-Shirt",
     "description": "Vans",
-    "prince": 4500,
+    "price": 4500,
     "thumbnail": "image1",
     "code": "code111",
     "stock": 25,
@@ -22,7 +22,7 @@
   {
     "title": "T-Shirt",
     "description": "Vans",
-    "prince": 4500,
+    "price": 4500,
     "thumbnail": "image1",
     "code": "code111",
     "stock": 25,

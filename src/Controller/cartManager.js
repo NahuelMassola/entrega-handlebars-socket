@@ -60,7 +60,6 @@ class cartManager {
             await this.writecarts(cartsConcat);
             return "Producto Agregado al carrito"
         }
-
     }
 }
 
