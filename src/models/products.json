@@ -5,9 +5,9 @@
     "price": 4500,
     "thumbnail": "image1",
     "code": "code111",
-    "stock": 25,
+    "stock": 15,
     "status": true,
-    "id": "C"
+    "id": "I"
   },
   {
     "title": "T-Shirt",
@@ -15,18 +15,28 @@
     "price": 4500,
     "thumbnail": "image1",
     "code": "code111",
-    "stock": 25,
+    "stock": 15,
     "status": true,
-    "id": "0"
+    "id": "T"
   },
   {
     "title": "T-Shirt",
     "description": "Vans",
     "price": 4500,
     "thumbnail": "image1",
-    "code": "code111",
-    "stock": 25,
+    "code": "code222",
+    "stock": 15,
     "status": true,
-    "id": "M"
+    "id": "E"
+  },
+  {
+    "title": "T-Shirt",
+    "description": "Vans",
+    "price": 4500,
+    "thumbnail": "image1",
+    "code": "code222",
+    "stock": 15,
+    "status": true,
+    "id": "K"
   }
 ]

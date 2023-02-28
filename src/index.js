@@ -5,9 +5,14 @@ import viewsRouter from "./routes/viewsRouter.router.js";
 import handlebars from "express-handlebars"
 import * as path from "path"
 import { fileURLToPath } from "url";
+import connectionSocket from "./utils/socket.io.js";
+import { Server } from "socket.io";
+import ProductManager from "./Controller/ProductManager.js";
+
 
 
 const app = express();
+const Product = new ProductManager();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirmame = path.dirname(__filename);
@@ -34,10 +39,17 @@ app.use("/" , viewsRouter);
 // creo el Puerto
 
 const PORT = 8080 ;
+
 const server = app.listen (PORT , () => { 
     console.log(`Local host ${server.address().port}` )
+    let io = new Server();
+    io.on ('connection', async (socket)=>{
+        console.log("Nuevo Clinte conectado")
+        let products = await Product.getProducts();
+        socket.emit('init-products', products)
+    })
 });
 
 // inicializo el servidor 
-
+connectionSocket(server);
 server.on("error" , (error) => console.log(`Error on ${error}`));

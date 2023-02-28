@@ -25,7 +25,7 @@ export default class ProductManager {
     // promesa para agregar producto
     addProduct = async (objeto) => {
         objeto.status = true;
-        if(objeto.title && objeto.description && objeto.code && objeto.stock && objeto.prince  ) {
+        if(objeto.title && objeto.description && objeto.code && objeto.stock && objeto.price  ) {
             let productOld = await this.readProducts();
             objeto.id = nanoid(1).toUpperCase();
             let productAll = [...productOld , objeto];
