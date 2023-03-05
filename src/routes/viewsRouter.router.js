@@ -21,16 +21,10 @@ viewsRouter.get("/realtimeproducts" , async (req ,res) => {
 })
 
 viewsRouter.delete('/realtimeproducts/:pid' , async (req , res ) => {
-    const id = +req.params.pid 
-    const Delete = await Product.deleteProduct (id);
-    if(Delete) {
-    res.json(Delete) 
-    }  else {
-        emitDeleteProduct(id)
-        res.json(Delete)
-    } 
-    }
-)
+    const id = req.params.pid 
+    const Delete = await Product.deleteProduct(id);
+    res.status(200).json(Delete)
+})
 
 
 export default viewsRouter;

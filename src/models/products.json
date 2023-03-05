@@ -10,16 +10,6 @@
     "id": "T"
   },
   {
-    "title": "T-Shirt",
-    "description": "Vans",
-    "price": 4500,
-    "thumbnail": "image1",
-    "code": "code222",
-    "stock": 15,
-    "status": true,
-    "id": "K"
-  },
-  {
     "title": "Pants",
     "description": "Collhass",
     "category": null,
@@ -28,5 +18,15 @@
     "stock": "34",
     "status": true,
     "id": "S"
+  },
+  {
+    "title": "asdas",
+    "description": "dasd",
+    "category": null,
+    "price": "22",
+    "code": "22",
+    "stock": "22",
+    "status": true,
+    "id": "8"
   }
 ]
