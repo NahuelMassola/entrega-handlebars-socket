@@ -7,16 +7,6 @@
     "code": "code111",
     "stock": 15,
     "status": true,
-    "id": "I"
-  },
-  {
-    "title": "T-Shirt",
-    "description": "Vans",
-    "price": 4500,
-    "thumbnail": "image1",
-    "code": "code111",
-    "stock": 15,
-    "status": true,
     "id": "T"
   },
   {
@@ -27,16 +17,16 @@
     "code": "code222",
     "stock": 15,
     "status": true,
-    "id": "E"
+    "id": "K"
   },
   {
-    "title": "T-Shirt",
-    "description": "Vans",
-    "price": 4500,
-    "thumbnail": "image1",
-    "code": "code222",
-    "stock": 15,
+    "title": "Pants",
+    "description": "Collhass",
+    "category": null,
+    "price": "9000",
+    "code": "code123",
+    "stock": "34",
     "status": true,
-    "id": "K"
+    "id": "S"
   }
 ]

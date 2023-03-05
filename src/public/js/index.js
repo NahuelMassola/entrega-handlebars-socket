@@ -1,4 +1,31 @@
+
+
 const socket = io();
+const btnForm = document.getElementById('btn-form');
+const form = document.getElementById('add-prod');
+const btnDel = document.getElementById('btn-del');
+
+const newProd = e => {
+	e.preventDefault();
+	const data = new FormData(form);
+	const prod = {
+		title: data.get('title'),
+		description: data.get('description'),
+		category: data.get('category'),
+		price: data.get('price'),
+		code: data.get('code'),
+		stock: data.get('stock')
+	};
+	socket.emit('addProd', prod);
+	form.reset();
+};
+
+socket.on('delete-product'), (id)=>{
+    const product = document.getElementById("id")
+    product.remove(); 
+}
+
+//const delProd = async e => socket.emit('delProd' , e.target.id)
 
 socket.on('init-products', (products)=>{
     const rowProducts = document.getElementById('rowProducts');
@@ -15,15 +42,15 @@ socket.on('init-products', (products)=>{
                 <h2 class="card-text text-center ">$ ${product.price}</h2>
                 <p class="card-text text-center ">Cantidad: ${product.stock}</p>
                 <div class="d-flex justify-content-center">
-                   <button type="button" class="btn btn-primary">Agregar</button>
+                    <button type="button" id=${product.id} class="btn-del">Delete</button>
                 </div>
             </div>
-           </div>`
+        </div>`
     });
 });
 
-socket.on('delete-product'), (id)=>{
-    const product = document.getElementById("id")
-    product.remove(); 
-}
+
+
+//document.addEventListener('click', e => e.target.matches('btn-del') && delProd(e));
+btnForm.addEventListener('click', newProd);
 

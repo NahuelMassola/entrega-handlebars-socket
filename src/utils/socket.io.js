@@ -9,16 +9,10 @@ const connectionSocket = (server)=>{
         console.log("Nuevo Clinte conectado")
         let products = await Product.getProducts();
         socket.emit('init-products', products)
+
+        socket.on('addProd' , async prod => await Product.addProduct(prod))
+        socket.on('delProd' , async id => await Product.deleteProduct(id))
     })
-
-    const emitDeleteProduct = (id)=>{
-        io.emit('delete-product', {id})
-    }
-
-    const emitaddRealtime = (add)=>{
-        io.emit('add-product',{add} )
-    }
-
 }
 
-export default  connectionSocket ; 
+export default  connectionSocket ;  

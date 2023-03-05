@@ -42,12 +42,6 @@ const PORT = 8080 ;
 
 const server = app.listen (PORT , () => { 
     console.log(`Local host ${server.address().port}` )
-    let io = new Server();
-    io.on ('connection', async (socket)=>{
-        console.log("Nuevo Clinte conectado")
-        let products = await Product.getProducts();
-        socket.emit('init-products', products)
-    })
 });
 
 // inicializo el servidor 
