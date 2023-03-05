@@ -1,32 +1,22 @@
 [
   {
-    "title": "T-Shirt",
-    "description": "Vans",
-    "price": 4500,
-    "thumbnail": "image1",
-    "code": "code111",
-    "stock": 15,
-    "status": true,
-    "id": "T"
-  },
-  {
     "title": "Pants",
-    "description": "Collhass",
+    "description": "Vans",
     "category": null,
-    "price": "9000",
-    "code": "code123",
-    "stock": "34",
+    "price": "9900",
+    "code": "code1234",
+    "stock": "23",
     "status": true,
-    "id": "S"
+    "id": "W"
   },
   {
-    "title": "asdas",
-    "description": "dasd",
+    "title": "T-Shirt",
+    "description": "VANs",
     "category": null,
-    "price": "22",
-    "code": "22",
-    "stock": "22",
+    "price": "7500",
+    "code": "code1235",
+    "stock": "12",
     "status": true,
-    "id": "8"
+    "id": "Y"
   }
 ]

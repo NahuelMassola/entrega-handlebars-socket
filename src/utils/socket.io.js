@@ -11,7 +11,7 @@ const connectionSocket = (server)=>{
         socket.emit('init-products', products)
 
         socket.on('addProd' , async prod => await Product.addProduct(prod))
-        socket.on('delProd' , async id => await Product.deleteProduct(id))
+        socket.on('delProd' , async (id) => await Product.deleteProduct(id))
     })
 }
 

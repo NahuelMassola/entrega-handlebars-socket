@@ -27,21 +27,21 @@ productRouter.get("/:id", async (req ,res) => {
 
 productRouter.post("/" , async (req , res) => {
     const newProduct = req.body
-    res.send(await productos.addProduct(newProduct));
+    res.status(200).json(await productos.addProduct(newProduct));
 })
 
 // Metodo para Eliminar un producto
 
 productRouter.delete("/:id" , async (req , res) => {
     let id = (req.params.id);
-    res.send(await productos.deleteProduct(id));
+    res.status(200).json(await productos.deleteProduct(id));
 })
 
 
 productRouter.put("/:id" , async (req , res) => {
     const id = (req.params.id);
     const updateProduct = req.body;
-    res.send(await productos.updateProducts(id , updateProduct));
+    res.status(200).json(await productos.updateProducts(id , updateProduct));
 })
 
 export default productRouter;

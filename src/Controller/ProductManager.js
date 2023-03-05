@@ -30,9 +30,9 @@ export default class ProductManager {
             objeto.id = nanoid(1).toUpperCase();
             let productAll = [...productOld , objeto];
             await this.writeProducts(productAll);
-            return "Product Agregado";
+            return {message: "Product Added succesfully" };
         } else {
-            return "All Field Are requerid" ;
+            return {message: "All Field Are requerid"};
         }
     }
 
@@ -42,29 +42,29 @@ export default class ProductManager {
 
     getProductById = async (id) => {
         let exist = await this.existProducts(id);
-        if(!exist) return(`product ID ${id} NOT FOUND`);
+        if(!exist) return{message: `product ID ${id} NOT FOUND`};
         return exist;
     }
 
-    deleteProduct = async (id) => { 
+    deleteProduct = async (id) => {
         let respuesta = await this.readProducts();
         let exist = respuesta.some((product) => product.id === id);
         let productFilter = respuesta.filter((products) => products.id !== id);
         if (!exist) {
-            return "Pruduct Mising"
+            return {message: "Pruduct Mising"};
         }  else {
             await this.writeProducts(productFilter,null,2);
-            return `Product with ID ${id} are deleted` ;
+            return {message: `Product with ID ${id} are deleted`};
         } 
     } 
 
     updateProducts = async (id ,producto) => {
         let exist = await this.existProducts(id);
-        if(!exist) return `Product with id ${id} NOT FOUND` ;
+        if(!exist) return {message: `Product with id ${id} NOT FOUND`};
         await this.deleteProduct(id);
         let productOld = await this.readProducts();
         let ProdcutModif = [{...producto , id: id}, ...productOld];
         await this.writeProducts(ProdcutModif);
-        return "Product Updated";
+        return {message: "Product Updated succesfully" };
     }
 }
